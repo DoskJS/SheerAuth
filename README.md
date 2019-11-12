@@ -1,45 +1,44 @@
 # SheerAuth
 ##### ⚡️ Fast, Light &amp; Simple SaaS Authentication
+
 <br>
+
+## **DEPENDENCIES**
+#### Fastify
+<REASON GOES HERE>
+#### Mongoose
+<REASON GOES HERE>
 
 ## **ROUTES**
 
-### **COMMON**
+#### **COMMON**
 | METHOD | ROUTE | HEADER(S) | PARAMETER(S) | PAYLOAD | RESPONSE | DESCRIPTION | 
 | ------ | ----- | --------- | ------------ | ------- | -------- | ----------- |
-| **GET** | */healthcheck* | `NULL` | `NULL` | `NULL` | **HealthCheckResponse:**<br>`Object<String, String>` | **Server Health Check** |
-| **POST** | */authenticate* | `NULL` | `NULL` | **AuthenticationPayload:**<br>`Object<String, String>` | **AuthenticationResponse:**<br>`Object<String, String>` | **Authenticate Using License Key** |
+| GET | */healthcheck* | `NULL` | `NULL` | `NULL` | **HealthCheckResponse**<br>`Object<String, String>` | Server Health Check |
+| POST | */authenticate* | `NULL` | `NULL` | **AuthenticationPayload**<br>`Object<String, String>` | **AuthenticationResponse**<br>`Object<String, String>` | Authenticate Using License Key |
 
-### **ADMIN**
+#### **ADMIN**
 | METHOD | ROUTE | HEADER(S) | PARAMETER(S) | PAYLOAD | RESPONSE | DESCRIPTION | 
 | ------ | ----- | --------- | ------------ | ------- | -------- | ----------- |
-| **GET** | */license* | **AuthenticationToken:**<br>`String` | **LicenseKey:**<br>`String` | `NULL` | **PublicLicense:**<br>`Object<String, String>` | **Get License Data** |
-| **POST** | */license* |  **AuthenticationToken:**<br>`String` | **LicenseKey:**<br>`String` | **PrivateLicense:**<br>`Object<String, String>` | **Result:**<br>`Object<String, String>` | **Create/Update License** |
-| **DELETE** | */license* | **AuthenticationToken:**<br>`String` | **LicenseKey:**<br>`String` | `NULL` | **Result:**<br>`Object<String, String>` | **Delete License** |
+| GET | */license* | **AuthenticationToken**<br>`String` | **LicenseKey**<br>`String` | `NULL` | **License**<br>`Object<String, String>` | Get License Data |
+| POST | */license* |  **AuthenticationToken**<br>`String` | **LicenseKey**<br>`String` | **License**<br>`Object<String, String>` | **Result**<br>`Object<String, String>` | Create/Update License |
+| DELETE | */license* | **AuthenticationToken**<br>`String` | **LicenseKey**<br>`String` | `NULL` | **Result**<br>`Object<String, String>` | Delete License |
 
-### **CLIENT**
+#### **CLIENT**
 | METHOD | ROUTE | HEADER(S) | PARAMETER(S) | PAYLOAD | RESPONSE | DESCRIPTION | 
 | ------ | ----- | --------- | ------------ | ------- | -------- | ----------- |
-| **GET** | */license* | **AuthenticationToken:**<br>`String` | `NULL` | `NULL` | **License:**<br>`Object<String, String>` | **Get License Data** |s
+| GET | */license* | **AuthenticationToken**<br>`String` | `NULL` | `NULL` | **License**<br>`Object<String, String>` | Get License Data |
 
 <br>
 
 ## **INTERFACES**
 
-### **LicenseKey**
+#### **LicenseKey**
 ```typescript
 const LicenseKey: String;
 ```
 
-### **PublicLicense**
-```typescript
-interface PublicLicense {
-    activated: Boolean;
-    key: String;
-}
-```
-
-### **PrivateLicense**
+#### **License**
 ```typescript
 interface License {
     activated: Boolean;
@@ -48,37 +47,36 @@ interface License {
 }
 ```
 
-### **AuthenticationToken**
+#### **AuthenticationToken**
 ```typescript
 const AuthenticationToken: String;
 ```
 
-### **Result**
+#### **Result**
 ```typescript
 interface Result {
     result: String
 }
 ```
 
-### **HealthCheckResponse**
+#### **HealthCheckResponse**
 ```typescript
 interface HealthCheckResponse {
     status: String;
-} 
+}
 ```
 
-### **AuthenticationPayload**
-```typescript
-interface AuthenticationPayload {
-    licenseKey: String;
-    identifier: String;
-} 
-```
-
-### **AuthenticationResponse**
+#### **AuthenticationPayload**
 ```typescript
 interface AuthenticationPayload {
     licenseKey: LicenseKey;
     identifier: String;
+} 
+```
+
+#### **AuthenticationResponse**
+```typescript
+interface AuthenticationResponse {
+    token: String;
 } 
 ```
