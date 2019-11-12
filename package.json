@@ -1,0 +1,27 @@
+{
+  "name": "sheerauth",
+  "version": "1.0.0",
+  "description": "Fast, Light & Simple SaaS Authentication",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoskJS/SheerAuth.git"
+  },
+  "author": "dosk <dosk@420blaze.it>",
+  "contributors": [
+    "Arya Alikhani <AryaAlikhani@icloud.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DoskJS/SheerAuth/issues"
+  },
+  "homepage": "https://github.com/DoskJS/SheerAuth#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fastify": "^2.10.0",
+    "mongoose": "^5.7.10"
+  }
+}
