@@ -1,7 +1,9 @@
 'use strict';
+const { License } = require(`../models`);
+
 const LicenseController = {
     GET: (request, reply) => {
-        
+        reply.send(license)
     },
     POST: (request, reply) => {
         

@@ -4,13 +4,13 @@
 <br>
 
 ## **DEPENDENCIES**
-#### **Fastify**
+### **Fastify**
 | Package                  | Router | Requests/s | Latency | Throughput/Mb |
 | :--                      | :-:    | --:        | --:     | --:           |
 | bare                     | ✗      | 50444.8    | 1.90    | 7.89          |
 | **fastify**              | ✓      | 50143.2    | 1.91    | 7.84          |
 | express                  | ✓      | 26583.2    | 3.67    | 4.16          |
-#### **Mongoose**
+### **Mongoose**
 We use Mongoose as a database, because it allows us to interface with MongoDB in a clean fashion.
 
 <br>

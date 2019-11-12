@@ -7,6 +7,6 @@ const UserSchema = new mongoose.Schema({
     instanceLimited: Boolean
 });
 
-const UserModel = mongoose.model('users', LicenseSchema);
+const UserModel = mongoose.model('users', UserSchema);
 
 module.exports = exports = UserModel;

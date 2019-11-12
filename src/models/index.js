@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-const UserModel = require('./User.model');
+const LicenseModel = require('./License.model');
 
 mongoose.connect(process.env.MONGO_CONNECTION_URL);
 
 module.exports = exports = {
-    UserModel
+    License: 
 };

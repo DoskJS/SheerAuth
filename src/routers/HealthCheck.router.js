@@ -5,12 +5,14 @@ const HealthCheckResponseScehma = {
   200: {
     type: 'object',
     properties: {
-      status: 'string'
+      status: {
+        type: 'string'
+      }
     }
   }
 }
 
-const HealthCheckRoutes = (fastify, options, next) => {
+const HealthCheckRouter = (fastify, options, next) => {
   fastify.route({
     method: 'GET',
     url: '/healthcheck',
@@ -23,4 +25,5 @@ const HealthCheckRoutes = (fastify, options, next) => {
   next();
 };
 
-module.exports = exports = HealthCheckRoutes;
+module.exports = exports = HealthCheckRouter;
+
