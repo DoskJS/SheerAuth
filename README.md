@@ -1,6 +1,10 @@
 # SheerAuth
 ##### ⚡️ Fast, Light &amp; Simple SaaS Authentication
+<<<<<<< HEAD
 
+=======
+Server powered by Fastify, utilzes JWT
+>>>>>>> 176c5adcb96340e203eac6253f70504e9047c174
 <br>
 
 ## **DEPENDENCIES**
@@ -38,7 +42,11 @@
 const LicenseKey: String;
 ```
 
+<<<<<<< HEAD
 #### **License**
+=======
+### **License**
+>>>>>>> 176c5adcb96340e203eac6253f70504e9047c174
 ```typescript
 interface License {
     activated: Boolean;
