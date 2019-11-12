@@ -11,7 +11,7 @@
 | **fastify**              | ✓      | 50143.2    | 1.91    | 7.84          |
 | express                  | ✓      | 26583.2    | 3.67    | 4.16          |
 #### **Mongoose**
-\<REASON GOES HERE>
+We use Mongoose as a database, because it allows us to interface with MongoDB in a clean fashion.
 
 <br>
 
